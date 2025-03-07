@@ -28,23 +28,29 @@ let teams =[
 ]
 
 // Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”
-for( let key in teams){
-    teams[key]['pointsMade'] = randomNumber();
-    teams[key]['fouls'] = randomNumber();
+for( let i = 0; i < teams.length; i++){
+    teams[i]['pointsMade'] = randomNumber();
+    teams[i]['fouls'] = randomNumber();
 }
 console.log(teams);
 
 // Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console
 
 const secondariTeams = [];
+let printIner = '';
 for(let i = 0; i < teams.length; i++){
     secondariTeams.push({
         neme : teams[i].name,
         fouls : teams[i].fouls,
     })
+    printIner += `<p> nome ${teams[i].name}</p> <p> falli ${teams[i].fouls}</p>`
 }
 
 console.log(secondariTeams);
+
+const printElement = document.getElementById('print');
+printElement.innerHTML = printIner;
+
 
 // funzione numeri random
 function randomNumber() {
