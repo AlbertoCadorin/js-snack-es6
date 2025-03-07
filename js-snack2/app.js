@@ -37,10 +37,10 @@ console.log(teams);
 // Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console
 
 const secondariTeams = [];
-for(let key in teams){
+for(let i = 0; i < teams.length; i++){
     secondariTeams.push({
-        neme : teams[key].name,
-        fouls : teams[key].fouls,
+        neme : teams[i].name,
+        fouls : teams[i].fouls,
     })
 }
 
