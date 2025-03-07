@@ -30,6 +30,7 @@ let bicycleWeight = bicycle[0]['weight'];
 console.log(bicycleWeight)
 let nameBicycle = bicycle[0];
 console.log(nameBicycle);
+let printIner = '';
 //  ciclo per controllare la bici con il peso minore 
 for( let i = 0; i < bicycle.length; i++){
 
@@ -45,3 +46,8 @@ for( let i = 0; i < bicycle.length; i++){
 }
 // stampoil nome e il peso della bici 
 console.log(`La bici con il peso minore è ${nameBicycle.name} e pesa ${bicycleWeight}kg`)
+printIner += `<p> La bici con il peso minore è ${nameBicycle.name} e pesa ${bicycleWeight}kg</p>`
+
+const printElement = document.getElementById('print');
+
+printElement.innerHTML = printIner;
