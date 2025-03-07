@@ -31,12 +31,12 @@ console.log(bicycleWeight)
 let nameBicycle = bicycle[0];
 console.log(nameBicycle);
 //  ciclo per controllare la bici con il peso minore 
-for( let key in bicycle){
+for( let i = 0; i < bicycle.length; i++){
 
-    let control = (bicycle[key]['weight']);
+    let control = (bicycle[i]['weight']);
    // console.log(control);
 
-    const bicycleLowerWeight = (bicycle[key]);
+    const bicycleLowerWeight = (bicycle[i]);
 
     if(control < bicycleWeight){
         bicycleWeight = control;
